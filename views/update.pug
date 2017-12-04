@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title ini form data buku
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
+  body
+    for row in data
+     form(action='/updatedataAndSave', method='POST')
+       input(type='text', placeholder='judul', name='judul' , value=row.judul)
+       br
+       input(type='text', placeholder='pengarang', name='pengarang', value=row.pengarang)
+       br
+       input(type='text', placeholder='id', name='id', value=row._id hidden)
+       br
+       button(type='submit') Submit
